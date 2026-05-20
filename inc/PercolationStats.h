@@ -2,7 +2,8 @@
 #include <vector>
 #include <cstddef>
 
-struct PercolationStats {
+struct PercolationStats 
+{
 private:
     size_t dimension;
     size_t trials;

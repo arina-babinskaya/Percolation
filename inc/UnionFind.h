@@ -2,7 +2,8 @@
 #include <vector>
 #include <cstddef>
 
-class UnionFind {
+class UnionFind 
+{
 private:
     std::vector<size_t> parent;
     std::vector<size_t> rank;

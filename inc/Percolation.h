@@ -3,7 +3,8 @@
 #include <cstddef>
 #include "../inc/UnionFind.h"
 
-class Percolation {
+class Percolation 
+{
 private:
     size_t n;
     std::vector<bool> opened;

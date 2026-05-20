@@ -30,27 +30,33 @@ void Percolation::open(size_t row, size_t col)
     opened[current] = true;
     ++openedCount;
 
-    if (row == 0) {
+    if (row == 0) 
+    {
         uf.unite(current, top);
     }
 
-    if (row == n - 1) {
+    if (row == n - 1) 
+    {
         uf.unite(current, bottom);
     }
 
-    if (row > 0 && is_open(row - 1, col)) {
+    if (row > 0 && is_open(row - 1, col)) 
+    {
         uf.unite(current, index(row - 1, col));
     }
 
-    if (row + 1 < n && is_open(row + 1, col)) {
+    if (row + 1 < n && is_open(row + 1, col)) 
+    {
         uf.unite(current, index(row + 1, col));
     }
 
-    if (col > 0 && is_open(row, col - 1)) {
+    if (col > 0 && is_open(row, col - 1)) 
+    {
         uf.unite(current, index(row, col - 1));
     }
 
-    if (col + 1 < n && is_open(row, col + 1)) {
+    if (col + 1 < n && is_open(row, col + 1)) 
+    {
         uf.unite(current, index(row, col + 1));
     }
 }
